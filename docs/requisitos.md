@@ -1,4 +1,4 @@
-Documento de Requisitos
+# Documento de Requisitos
 Problema
 
 Muitas escolas possuem dificuldade em gerenciar alunos, turmas e pagamentos de forma organizada.
