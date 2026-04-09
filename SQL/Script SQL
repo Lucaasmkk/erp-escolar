@@ -1,1 +1,24 @@
+Table Turma {
+  id_turma int [pk, increment]
+  nome varchar(50) [not null]
+  turno varchar(20)
+}
+
+Table Aluno {
+  id_aluno int [pk, increment]
+  nome varchar(100) [not null]
+  cpf varchar(11)
+  data_nascimento date
+  id_turma int
+}
+
+Table Pagamento {
+  id_pagamento int [pk, increment]
+  valor decimal(10,2) [not null]
+  data_pagamento date
+  id_aluno int
+}
+
+Ref: Aluno.id_turma > Turma.id_turma
+Ref: Pagamento.id_aluno > Aluno.id_aluno
 
