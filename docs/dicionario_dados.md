@@ -1,21 +1,40 @@
-# Dicionário de Dados
+#Dicionario de Dados
 
-Tabela: Aluno
+Tabela: aluno
+id_aluno (INT, PK, AUTO_INCREMENT)
+nome (VARCHAR(100), NOT NULL)
+data_nascimento (DATE, NOT NULL)
+matricula (VARCHAR(20), UNIQUE, NOT NULL)
 
-* id_aluno (INT, PK)
-* nome (VARCHAR(100), NOT NULL)
-* cpf (VARCHAR(11), UNIQUE)
-* data_nascimento (DATE)
+Tabela: professor
+id_professor (INT, PK)
+nome (VARCHAR(100), NOT NULL)
+especialidade (VARCHAR(100))
 
-Tabela: Turma
+Tabela: disciplina
+id_disciplina (INT, PK)
+nome (VARCHAR(100), NOT NULL)
+carga_horaria (INT)
 
-* id_turma (INT, PK)
-* nome (VARCHAR(50))
-* turno (VARCHAR(20))
+Tabela: turma
+id_turma (INT, PK)
+nome (VARCHAR(50))
+periodo (VARCHAR(20))
 
-Tabela: Pagamento
+matricula (aluno x turma)
+id_matricula (INT, PK)
+id_aluno (FK)
+id_turma (FK)
+data_matricula (DATE)
 
-* id_pagamento (INT, PK)
-* valor (DECIMAL(10,2), NOT NULL)
-* data_pagamento (DATE)
-* id_aluno (INT, FK → Aluno.id_aluno)
+notas
+id_nota (INT, PK)
+id_matricula (FK)
+id_disciplina (FK)
+nota (DECIMAL(5,2))
+
+frequencia
+id_frequencia (INT, PK)
+id_matricula (FK)
+data (DATE)
+presenca (BOOLEAN)
