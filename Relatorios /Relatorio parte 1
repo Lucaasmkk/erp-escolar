@@ -1,0 +1,26 @@
+# Relatorio 
+
+Nesta primeira etapa, foquei em estruturar a base do sistema ERP Escolar, pensando principalmente em como organizar as informações de forma lógica antes de partir para o desenvolvimento completo.
+Comecei definindo as principais entidades, como alunos, professores, turmas e disciplinas, buscando representar o funcionamento básico de uma instituição de ensino.
+Também iniciei a modelagem do banco de dados com a criação das tabelas em SQL, ainda de forma parcial, mas já considerando os principais relacionamentos.
+O uso do GitHub desde o início foi importante para manter o controle das alterações e organizar o projeto.
+Apesar de ainda estar em fase inicial, a estrutura criada serve como base sólida para evolução do sistema nas próximas etapas
+
+## Requisitos funcionais 
+
+RF01: O sistema deve permitir o cadastro de alunos
+RF02: O sistema deve permitir o cadastro de professores
+RF03: O sistema deve permitir o cadastro de disciplinas
+RF04: O sistema deve permitir a criação de turmas
+RF05: O sistema deve permitir matricular alunos em turmas
+RF06: O sistema deve permitir o registro de notas dos alunos
+RF07: O sistema deve permitir o registro de frequência dos alunos
+
+##Requisitos Não Funcionais
+
+RNF01: O sistema deve garantir a integridade dos dados por meio de chaves primárias e estrangeiras
+RNF02: O banco de dados deve evitar redundância de informações
+RNF03: As tabelas devem estar organizadas de forma relacional
+RNF04: O sistema deve permitir fácil manutenção e evolução futura
+RNF05: O projeto deve ser versionado utilizando GitHub
+RNF06: O banco deve suportar a implementação de novas funcionalidades nas próximas etapas
