@@ -1,4 +1,4 @@
-#Dicionario de Dados
+# Dicionario de Dados
 
 Tabela: aluno
 id_aluno (INT, PK, AUTO_INCREMENT)
