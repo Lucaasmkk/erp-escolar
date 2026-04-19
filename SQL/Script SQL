@@ -1,24 +1,51 @@
-Table Turma {
-  id_turma int [pk, increment]
-  nome varchar(50) [not null]
-  turno varchar(20)
-}
-
-Table Aluno {
+Table aluno {
   id_aluno int [pk, increment]
   nome varchar(100) [not null]
-  cpf varchar(11)
-  data_nascimento date
-  id_turma int
+  data_nascimento date [not null]
+  matricula varchar(20) [unique, not null]
 }
 
-Table Pagamento {
-  id_pagamento int [pk, increment]
-  valor decimal(10,2) [not null]
-  data_pagamento date
+Table professor {
+  id_professor int [pk, increment]
+  nome varchar(100) [not null]
+  especialidade varchar(100)
+}
+
+Table disciplina {
+  id_disciplina int [pk, increment]
+  nome varchar(100) [not null]
+  carga_horaria int
+}
+
+Table turma {
+  id_turma int [pk, increment]
+  nome varchar(50)
+  periodo varchar(20)
+}
+
+Table matricula {
+  id_matricula int [pk, increment]
   id_aluno int
+  id_turma int
+  data_matricula date
 }
 
-Ref: Aluno.id_turma > Turma.id_turma
-Ref: Pagamento.id_aluno > Aluno.id_aluno
+Table notas {
+  id_nota int [pk, increment]
+  id_matricula int
+  id_disciplina int
+  nota decimal(5,2)
+}
 
+Table frequencia {
+  id_frequencia int [pk, increment]
+  id_matricula int
+  data date
+  presenca boolean
+}
+
+Ref: matricula.id_aluno > aluno.id_aluno
+Ref: matricula.id_turma > turma.id_turma
+Ref: notas.id_matricula > matricula.id_matricula
+Ref: notas.id_disciplina > disciplina.id_disciplina
+Ref: frequencia.id_matricula > matricula.id_matricula
