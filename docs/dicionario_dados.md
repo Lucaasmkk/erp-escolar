@@ -1,65 +1,65 @@
 # Dicionario de Dados
 
-Tabela: aluno
+## Tabela: aluno
 
-id_aluno (INT, PK, AUTO_INCREMENT)
+-id_aluno (INT, PK, AUTO_INCREMENT)
 
-nome (VARCHAR(100), NOT NULL)
+-nome (VARCHAR(100), NOT NULL)
 
-data_nascimento (DATE, NOT NULL)
+-data_nascimento (DATE, NOT NULL)
 
-matricula (VARCHAR(20), UNIQUE, NOT NULL)
+-matricula (VARCHAR(20), UNIQUE, NOT NULL)
 
 Tabela: professor
 
-id_professor (INT, PK)
+-id_professor (INT, PK)
 
-nome (VARCHAR(100), NOT NULL)
+-nome (VARCHAR(100), NOT NULL)
 
-especialidade (VARCHAR(100))
+-especialidade (VARCHAR(100))
 
 Tabela: disciplina
 
-id_disciplina (INT, PK)
+-id_disciplina (INT, PK)
 
-nome (VARCHAR(100), NOT NULL)
+-nome (VARCHAR(100), NOT NULL)
 
-carga_horaria (INT)
+-carga_horaria (INT)
 
 Tabela: turma
 
-id_turma (INT, PK)
+-id_turma (INT, PK)
 
-nome (VARCHAR(50))
+-nome (VARCHAR(50))
 
-periodo (VARCHAR(20))
+-periodo (VARCHAR(20))
 
-matricula (aluno x turma)
+-matricula (aluno x turma)
 
-id_matricula (INT, PK)
+-id_matricula (INT, PK)
 
-id_aluno (FK)
+-id_aluno (FK)
 
-id_turma (FK)
+-id_turma (FK)
 
-data_matricula (DATE)
+-data_matricula (DATE)
 
 notas
 
-id_nota (INT, PK)
+-id_nota (INT, PK)
 
-id_matricula (FK)
+-id_matricula (FK)
 
-id_disciplina (FK)
+-id_disciplina (FK)
 
-nota (DECIMAL(5,2))
+-nota (DECIMAL(5,2))
 
 frequencia
 
-id_frequencia (INT, PK)
+-id_frequencia (INT, PK)
 
-id_matricula (FK)
+-id_matricula (FK)
 
-data (DATE)
+-data (DATE)
 
-presenca (BOOLEAN)
+-presenca (BOOLEAN)
